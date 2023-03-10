@@ -1,13 +1,15 @@
 name: ci-release-image
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
-    name: versioned image
-    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
