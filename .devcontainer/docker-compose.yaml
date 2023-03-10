@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VARIANT: 1.19-bullseye
+        NODE_VERSION: none
+        MONGO_VERSION: "4.2"
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - ..:/workspace:cached
+    ports:
+      - 8000:8000
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+
+    # Uncomment the next line to use a non-root user for all processes.
+    user: vscode
