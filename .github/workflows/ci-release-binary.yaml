@@ -1,0 +1,67 @@
+name: ci-release-binary
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release-linux-386:
+    name: release linux/386
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Compile and upload release
+      uses: StevenCyb/sc-go-cross-build@0.1.0
+      with: 
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        platform: "linux/386"
+        include-files: "README.md"
+  release-linux-amd64:
+    name: release linux/amd64
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Compile and upload release
+      uses: StevenCyb/sc-go-cross-build@0.1.0
+      with: 
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        platform: "linux/amd64"
+        include-files: "README.md"
+  release-linux-arm:
+    name: release linux/arm
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Compile and upload release
+      uses: StevenCyb/sc-go-cross-build@0.1.0
+      with: 
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        platform: "linux/arm"
+        include-files: "README.md"
+  release-windows-386:
+    name: release windows/386
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Compile and upload release
+      uses: StevenCyb/sc-go-cross-build@0.1.0
+      with: 
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        platform: "windows/386"
+        include-files: "README.md"
+  release-windows-amd64:
+    name: release windows/amd64
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Compile and upload release
+      uses: StevenCyb/sc-go-cross-build@0.1.0
+      with: 
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        platform: "windows/amd64"
+        include-files: "README.md"
