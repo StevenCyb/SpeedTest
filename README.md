@@ -1,4 +1,3 @@
-[![GitHub release badge](https://badgen.net/github/release/StevenCyb/SpeedTest/latest?label=Latest&logo=GitHub)](https://github.com/StevenCyb/SpeedTest/releases/latest)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/StevenCyb/SpeedTest/ci-test.yml?label=Tests&logo=GitHub)
 ![GitHub](https://img.shields.io/github/license/StevenCyb/SpeedTest)
 
