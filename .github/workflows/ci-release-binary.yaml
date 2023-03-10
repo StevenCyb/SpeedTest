@@ -7,7 +7,6 @@ on:
 jobs:
   release-linux-386:
     name: release linux/386
-    needs: test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -19,7 +18,6 @@ jobs:
         include-files: "README.md"
   release-linux-amd64:
     name: release linux/amd64
-    needs: test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -31,7 +29,6 @@ jobs:
         include-files: "README.md"
   release-linux-arm:
     name: release linux/arm
-    needs: test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -43,7 +40,6 @@ jobs:
         include-files: "README.md"
   release-windows-386:
     name: release windows/386
-    needs: test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -55,7 +51,6 @@ jobs:
         include-files: "README.md"
   release-windows-amd64:
     name: release windows/amd64
-    needs: test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
