@@ -1,0 +1,153 @@
+/* general */
+* {
+  color: #eeeeee;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  transition: border 0.3s ease-out, opacity .3s ease-in-out;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #21252b;
+  padding: 10px 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-family: Helvetica, sans-serif;
+}
+
+*:disabled {
+  opacity: 0.2;
+}
+
+progress {
+  display: block;
+  width: 100%;
+  height: 4px;
+  appearance: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+}
+
+progress::-webkit-progress-value {
+  background-color: #C1E1C1;
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+progress::-webkit-progress-bar {
+  margin: 0;
+  background-color: transparent;
+}
+
+/* layout */
+.group {
+  padding: 15px;
+  background-color: #282c34;
+  border: solid 1px #686c73;
+  margin-bottom: 5px;
+  opacity: 1;
+}
+
+.separator {
+  width: 100%;
+  margin: 10px 0;
+  border-bottom: 1px solid #686c73;
+}
+
+/* effects */
+.disabled {
+  opacity: 0.2;
+}
+
+.disabled input:disabled,
+.disabled select:disabled,
+.disabled button:disabled {
+  opacity: 1 !important;
+}
+
+.hidden {
+  opacity: 0 !important;
+}
+
+/* inputs */
+input,
+select,
+button {
+  background-color: transparent;
+}
+
+button {
+  width: 100%;
+}
+
+input[type="number"]:hover,
+input[type="number"]:active,
+button:hover,
+button:active {
+  background-color: transparent;
+  outline: none;
+}
+
+input[type="number"]:focus,
+button:focus {
+  border-color: #eeeeee;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"],
+select {
+  min-width: 85px;
+  padding: 0 5px;
+  margin: 0 0 0 25px;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #686c73;
+  text-align: right;
+}
+
+select {
+  min-width: 0 !important;
+}
+
+button {
+  border: 1px solid #686c73;
+}
+
+.invalid {
+  border-color: #ff6961 !important;
+}
+
+progress.invalid::-webkit-progress-value {
+  background-color: #ff6961;
+}
+
+/* output */
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.align-left {
+  margin-right: auto;
+}
+
+.align-right {
+  margin-left: 10px;
+}
